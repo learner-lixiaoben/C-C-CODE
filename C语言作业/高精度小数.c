@@ -1,0 +1,52 @@
+#include <stdio.h>
+int main()
+{int a,b,i,n;
+if(scanf("%d/%d",&a,&b));
+if((b/a)<=10)
+{
+	printf("0."); 
+	a=a*10;
+	printf("%d",a/b);
+	n=1;
+	i=a/b;
+	while((a%b!=0)&&n<200)
+	{
+		a=(a-b*i)*10;
+		i=a/b;
+		printf("%d",i);	
+		n++;
+	}
+	printf("\n");
+}
+else if((b/a)>10&&(b/a)<=100)
+{
+	printf("0.0");
+	a=a*100;
+	printf("%d",a/b);
+	n=2;
+	i=a/b;
+	while((a%b)!=0&&n<200) 
+	{
+		a=(a-b*i)*10;
+		i=a/b;
+		printf("%d",i);
+		n++;
+	}
+	printf("\n");
+}
+else
+{
+	printf("0.00");
+	a=a*1000;
+    printf("%d",a/b);
+    n=3;
+	while((a%b)!=0&&n<200)
+	{
+		a=a*10;
+		i=a/b;
+		printf("%d",i);
+		n++;
+	}
+	printf("\n");
+   }   
+}
